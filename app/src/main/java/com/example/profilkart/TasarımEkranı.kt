@@ -1,4 +1,5 @@
 package com.example.profilkart
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
@@ -22,10 +24,10 @@ import androidx.compose.ui.unit.sp
 
 @Preview(showBackground = true)
 @Composable
-fun TasarimEkrani () {
+fun TasarimEkrani() {
     Box(
         modifier = Modifier.fillMaxSize()
-    ){
+    ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -42,11 +44,33 @@ fun TasarimEkrani () {
         ) {
             Column(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment =Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Spacer(modifier = Modifier.height(50.dp))
-                Text(text = "Davut Eren Ekici", fontSize = 22.sp , fontWeight = Bold)
+                Spacer(modifier = Modifier.height(55.dp))
+                Text(text = "Davut Eren Ekici", fontSize = 22.sp, fontWeight = Bold)
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "Bilişim Teknolojileri Öğrencisi / Geliştirici",
+                    fontSize = 14.sp,
+                    color = Color.Gray
+                )
+            }
+        }
+        Box(
+            modifier = Modifier
+                .padding(top = 60.dp)
+                .size(80.dp)
+                .align(Alignment.TopCenter),
+            contentAlignment = Alignment.Center
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color.White, shape = RoundedCornerShape(40.dp))
+            ) {
+
             }
         }
     }
+
 }
