@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -62,7 +63,7 @@ fun TasarimEkrani() {
             }
             Spacer(modifier = Modifier.height(16.dp))
             Row(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
                 //Proje
@@ -79,6 +80,26 @@ fun TasarimEkrani() {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "180", fontSize = 18.sp, fontWeight = Bold)
                     Text(text = "Takip", fontSize = 12.sp, color = Color.Gray)
+                }
+            }
+            Spacer(modifier = Modifier.height(24.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                //Mesaj Button
+                Button(
+                    onClick = {},
+                    modifier = Modifier.width(180.dp)
+                ) {
+                    Text(text = "✉️Mesaj")
+                }
+                //Takip et button
+                Button(
+                    onClick = {},
+                    modifier = Modifier.width(180.dp)
+                ) {
+                    Text(text = "Takip Et")
                 }
             }
         }
