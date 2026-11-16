@@ -1,6 +1,7 @@
 package com.example.profilkart
 
 import android.R
+import android.widget.Space
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -16,10 +17,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CheckboxDefaults.colors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.fontResource
 import androidx.compose.ui.text.font.FontWeight
@@ -101,6 +105,34 @@ fun TasarimEkrani() {
                 ) {
                     Text(text = "Takip Et")
                 }
+
+            }
+            Spacer(modifier = Modifier.height(24.dp))
+            Text(
+                text = "Projeler",
+                fontSize = 18.sp,
+                fontWeight = Bold,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp)
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+
+            ) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
+                ) {
+                    Text(text = "Code Truck", fontSize = 16.sp, fontWeight = Bold)
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması")
+                }
             }
         }
         Box(
@@ -117,7 +149,9 @@ fun TasarimEkrani() {
             ) {
 
             }
+
         }
+
     }
 
 }
