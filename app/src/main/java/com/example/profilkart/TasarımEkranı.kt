@@ -131,7 +131,16 @@ fun TasarimEkrani() {
                 ) {
                     Text(text = "Code Truck", fontSize = 16.sp, fontWeight = Bold)
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması")
+                    Text(text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması.")
+                }
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
+                ) {
+                    Text(text = "AI Note Master", fontSize = 16.sp, fontWeight = Bold)
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(text = "Ders notlarını yapay zeka ile özetleyen ve test soruları üreten web uygulaması.")
                 }
             }
         }
