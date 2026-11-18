@@ -1,7 +1,5 @@
 package com.example.profilkart
 
-import android.R
-import android.widget.Space
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,15 +16,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CheckboxDefaults.colors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.fontResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -48,7 +42,6 @@ fun TasarimEkrani() {
         Card(
             modifier = Modifier
                 .fillMaxSize()
-                .height(300.dp)
                 .padding(top = 100.dp),
             shape = RoundedCornerShape(24.dp)
         ) {
@@ -70,17 +63,17 @@ fun TasarimEkrani() {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                //Proje
+                // Proje
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "25", fontSize = 18.sp, fontWeight = Bold)
                     Text(text = "Proje", fontSize = 12.sp, color = Color.Gray)
                 }
-                //takipçi
+                // Takipçi
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "340", fontSize = 18.sp, fontWeight = Bold)
                     Text(text = "Takipçi", fontSize = 12.sp, color = Color.Gray)
                 }
-                //Takip
+                // Takip
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = "180", fontSize = 18.sp, fontWeight = Bold)
                     Text(text = "Takip", fontSize = 12.sp, color = Color.Gray)
@@ -91,21 +84,20 @@ fun TasarimEkrani() {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                //Mesaj Button
+                // Mesaj Button
                 Button(
                     onClick = {},
                     modifier = Modifier.width(180.dp)
                 ) {
                     Text(text = "✉️Mesaj")
                 }
-                //Takip et button
+                // Takip et button
                 Button(
                     onClick = {},
                     modifier = Modifier.width(180.dp)
                 ) {
                     Text(text = "Takip Et")
                 }
-
             }
             Spacer(modifier = Modifier.height(24.dp))
             Text(
@@ -121,26 +113,41 @@ fun TasarimEkrani() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 20.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp)
-
+                verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
+
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White)
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                 ) {
-                    Text(text = "Code Truck", fontSize = 16.sp, fontWeight = Bold)
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması.")
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "CodeTrack", fontSize = 16.sp, fontWeight = Bold)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text(
+                            text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması.",
+                            fontSize = 13.sp,
+                            color = Color.DarkGray
+                        )
+                    }
                 }
+
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White)
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                 ) {
-                    Text(text = "AI Note Master", fontSize = 16.sp, fontWeight = Bold)
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = "Ders notlarını yapay zeka ile özetleyen ve test soruları üreten web uygulaması.")
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "AI Note Master", fontSize = 16.sp, fontWeight = Bold)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text(
+                            text = "Ders notlarını yapay zeka ile özetleyen ve test soruları üreten web uygulaması.",
+                            fontSize = 13.sp,
+                            color = Color.DarkGray
+                        )
+                    }
                 }
             }
         }
@@ -155,12 +162,7 @@ fun TasarimEkrani() {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Color.White, shape = RoundedCornerShape(40.dp))
-            ) {
-
-            }
-
+            )
         }
-
     }
-
 }
