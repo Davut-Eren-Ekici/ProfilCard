@@ -120,7 +120,7 @@ fun TasarimEkrani() {
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)//gölge ekleyerek arka plandan zarifçe öne çıkmalarını sağlar
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         Text(text = "CodeTrack", fontSize = 16.sp, fontWeight = Bold)
@@ -144,6 +144,38 @@ fun TasarimEkrani() {
                         Spacer(modifier = Modifier.height(6.dp))
                         Text(
                             text = "Ders notlarını yapay zeka ile özetleyen ve test soruları üreten web uygulaması.",
+                            fontSize = 13.sp,
+                            color = Color.DarkGray
+                        )
+                    }
+                }
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "Portfolio", fontSize = 16.sp, fontWeight = Bold)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text(
+                            text = "My personal portfolio website",
+                            fontSize = 13.sp,
+                            color = Color.DarkGray
+                        )
+                    }
+                }
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = " My-Favorites", fontSize = 16.sp, fontWeight = Bold)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text(
+                            text = "\uD83C\uDF1F En sevdiğiniz film, müzik, kitap ve hobileri kategorize edip puanlayabileceğiniz uygulama",
                             fontSize = 13.sp,
                             color = Color.DarkGray
                         )
