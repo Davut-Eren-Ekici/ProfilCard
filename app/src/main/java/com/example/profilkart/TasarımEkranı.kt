@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -45,8 +47,11 @@ fun TasarimEkrani() {
                 .padding(top = 100.dp),
             shape = RoundedCornerShape(24.dp)
         ) {
+
             Column(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Spacer(modifier = Modifier.height(55.dp))
@@ -57,132 +62,145 @@ fun TasarimEkrani() {
                     fontSize = 14.sp,
                     color = Color.Gray
                 )
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly
-            ) {
-                // Proje
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "25", fontSize = 18.sp, fontWeight = Bold)
-                    Text(text = "Proje", fontSize = 12.sp, color = Color.Gray)
-                }
-                // Takipçi
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "340", fontSize = 18.sp, fontWeight = Bold)
-                    Text(text = "Takipçi", fontSize = 12.sp, color = Color.Gray)
-                }
-                // Takip
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "180", fontSize = 18.sp, fontWeight = Bold)
-                    Text(text = "Takip", fontSize = 12.sp, color = Color.Gray)
-                }
-            }
-            Spacer(modifier = Modifier.height(24.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly
-            ) {
-                // Mesaj Button
-                Button(
-                    onClick = {},
-                    modifier = Modifier.width(180.dp)
-                ) {
-                    Text(text = "✉️Mesaj")
-                }
-                // Takip et button
-                Button(
-                    onClick = {},
-                    modifier = Modifier.width(180.dp)
-                ) {
-                    Text(text = "Takip Et")
-                }
-            }
-            Spacer(modifier = Modifier.height(24.dp))
-            Text(
-                text = "Projeler",
-                fontSize = 18.sp,
-                fontWeight = Bold,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 20.dp)
-            )
-            Spacer(modifier = Modifier.height(12.dp))
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 20.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
 
-                Card(
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Row(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)//gölge ekleyerek arka plandan zarifçe öne çıkmalarını sağlar
+                    horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(text = "CodeTrack", fontSize = 16.sp, fontWeight = Bold)
-                        Spacer(modifier = Modifier.height(6.dp))
-                        Text(
-                            text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması.",
-                            fontSize = 13.sp,
-                            color = Color.DarkGray
-                        )
+                    // Proje
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "25", fontSize = 18.sp, fontWeight = Bold)
+                        Text(text = "Proje", fontSize = 12.sp, color = Color.Gray)
+                    }
+                    // Takipçi
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "340", fontSize = 18.sp, fontWeight = Bold)
+                        Text(text = "Takipçi", fontSize = 12.sp, color = Color.Gray)
+                    }
+                    // Takip
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "180", fontSize = 18.sp, fontWeight = Bold)
+                        Text(text = "Takip", fontSize = 12.sp, color = Color.Gray)
                     }
                 }
 
-                Card(
+                Spacer(modifier = Modifier.height(24.dp))
+
+                Row(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(text = "AI Note Master", fontSize = 16.sp, fontWeight = Bold)
-                        Spacer(modifier = Modifier.height(6.dp))
-                        Text(
-                            text = "Ders notlarını yapay zeka ile özetleyen ve test soruları üreten web uygulaması.",
-                            fontSize = 13.sp,
-                            color = Color.DarkGray
-                        )
+                    // Mesaj Button
+                    Button(
+                        onClick = {},
+                        modifier = Modifier.width(180.dp)
+                    ) {
+                        Text(text = "✉️Mesaj")
+                    }
+                    // Takip et button
+                    Button(
+                        onClick = {},
+                        modifier = Modifier.width(180.dp)
+                    ) {
+                        Text(text = "Takip Et")
                     }
                 }
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                Text(
+                    text = "Projeler",
+                    fontSize = 18.sp,
+                    fontWeight = Bold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp)
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(text = "Portfolio", fontSize = 16.sp, fontWeight = Bold)
-                        Spacer(modifier = Modifier.height(6.dp))
-                        Text(
-                            text = "My personal portfolio website",
-                            fontSize = 13.sp,
-                            color = Color.DarkGray
-                        )
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Text(text = "CodeTrack", fontSize = 16.sp, fontWeight = Bold)
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "Yazılımcılar için geliştirilmiş canlı süre takibi, proje yönetimi ve istatistik sunan modern web uygulaması.",
+                                fontSize = 13.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+                    }
+
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Text(text = "AI Note Master", fontSize = 16.sp, fontWeight = Bold)
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "Ders notlarını yapay zeka ile özetleyen ve test soruları üreten web uygulaması.",
+                                fontSize = 13.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+                    }
+
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Text(text = "Portfolio", fontSize = 16.sp, fontWeight = Bold)
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "My personal portfolio website",
+                                fontSize = 13.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+                    }
+
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Text(text = "My-Favorites", fontSize = 16.sp, fontWeight = Bold)
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "\uD83C\uDF1F En sevdiğiniz film, müzik, kitap ve hobileri kategorize edip puanlayabileceğiniz uygulama",
+                                fontSize = 13.sp,
+                                color = Color.DarkGray
+                            )
+                        }
                     }
                 }
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-                ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(text = " My-Favorites", fontSize = 16.sp, fontWeight = Bold)
-                        Spacer(modifier = Modifier.height(6.dp))
-                        Text(
-                            text = "\uD83C\uDF1F En sevdiğiniz film, müzik, kitap ve hobileri kategorize edip puanlayabileceğiniz uygulama",
-                            fontSize = 13.sp,
-                            color = Color.DarkGray
-                        )
-                    }
-                }
+
+
+                Spacer(modifier = Modifier.height(24.dp))
             }
         }
+
         Box(
             modifier = Modifier
                 .padding(top = 60.dp)
