@@ -105,14 +105,14 @@ fun TasarimEkrani() {
                         .padding(horizontal = 20.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    // Mesaj Button
+
                     Button(
                         onClick = {},
                         modifier = Modifier.weight(1f)
                     ) {
                         Text(text = "✉️ Mesaj")
                     }
-                    // Takip et button
+
                     Button(
                         onClick = {},
                         modifier = Modifier.weight(1f)
