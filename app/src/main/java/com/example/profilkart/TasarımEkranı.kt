@@ -238,21 +238,70 @@ fun TasarimEkrani() {
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
-            }
-        }
 
-        Box(
-            modifier = Modifier
-                .padding(top = 60.dp)
-                .size(80.dp)
-                .align(Alignment.TopCenter),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color.White, shape = RoundedCornerShape(40.dp))
-            )
+                Text(
+                    text = "İletişim",
+                    fontSize = 18.sp,
+                    fontWeight = Bold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp)
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 20.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
+                        ),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Text(
+                                text = "E-Posta",
+                                fontSize = 16.sp,
+                                fontWeight = Bold,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "davuteren052@gmail.com",
+                                fontSize = 13.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+
+
+                        }
+                        Column(modifier = Modifier.padding(16.dp)) {
+                            Text(
+                                text = "GitHub",
+                                fontSize = 16.sp,
+                                fontWeight = Bold,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = "https://github.com/Davut-Eren-Ekici",
+                                fontSize = 13.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+
+                        }
+                        Spacer(modifier = Modifier.height(24.dp))
+
+
+                    }
+                }
+            }
+
+
         }
     }
 }
